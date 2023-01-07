@@ -5,7 +5,7 @@ set -o pipefail
 
 GH_REMOTE="origin"
 SOURCE_BRANCH="main"
-DEPLOY_BRANCH="gh-pages"
+DEPLOY_BRANCH="main"
 readonly WEBSITE_DIR_PATH="dist"
 
 # CLI constants
