@@ -85,7 +85,7 @@ const sendEIP1559Button = document.getElementById('sendEIP1559Button');
 
 // Send Tokens Section
 const decimalUnits = 4;
-const tokenSymbol = 'TST';
+const tokenSymbol = 'CASH';
 const tokenAddress = document.getElementById('tokenAddress');
 const createToken = document.getElementById('createToken');
 const watchAsset = document.getElementById('watchAsset');
@@ -648,7 +648,7 @@ const initialize = async () => {
 
     createToken.onclick = async () => {
       const _initialAmount = 100;
-      const _tokenName = 'TST';
+      const _tokenName = 'CASH';
 
       try {
         hstContract = await hstFactory.deploy(
