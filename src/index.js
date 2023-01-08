@@ -296,6 +296,9 @@ const initialize = async () => {
     const accountButtonsDisabled =
       !isMetaMaskInstalled() || !isMetaMaskConnected();
     if (accountButtonsDisabled) {
+      for (const button of accountButtons) {
+        button.disabled = true;
+      }
       clearTextDisplays();
     } else {
       deployButton.disabled = false;
