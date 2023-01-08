@@ -663,6 +663,7 @@ const initialize = async () => {
           tokenSymbol,
         );
         await hstContract.deployTransaction.wait();
+        tokenAddress.innerHTML = `Please wait to be mined to ōCash Testnet (30-180 seconds)...`;
       } catch (error) {
         tokenAddress.innerHTML = 'Creation Failed';
         throw error;
