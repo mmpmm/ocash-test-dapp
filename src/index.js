@@ -85,7 +85,6 @@ const sendEIP1559Button = document.getElementById('sendEIP1559Button');
 
 // Send Tokens Section
 const decimalUnits = 4;
-const tokenSymbol = 'CASH';
 const tokenAddress = document.getElementById('tokenAddress');
 const createToken = document.getElementById('createToken');
 const watchAsset = document.getElementById('watchAsset');
@@ -647,12 +646,18 @@ const initialize = async () => {
      */
 
     createToken.onclick = async () => {
+      const tokenNameRef = document.getElementById('tokenName');
+      const tokenSymbolRef = document.getElementById('tokenSymbol');
+      const tokenAmountRef = document.getElementById('tokenAmount');
+      const tokenAmount = tokenAmountRef.value;
+      const tokenSymbol = tokenSymbolRef.value;
+
       const _initialAmount = 100;
-      const _tokenName = 'CASH';
+      const _tokenName = tokenNameRef.value;
 
       try {
         hstContract = await hstFactory.deploy(
-          _initialAmount,
+          tokenAmount,
           _tokenName,
           decimalUnits,
           tokenSymbol,
@@ -670,7 +675,7 @@ const initialize = async () => {
       console.log(
         `Contract mined! address: ${hstContract.address} transactionHash: ${hstContract.deployTransaction.hash}`,
       );
-      tokenAddress.innerHTML = hstContract.address;
+      tokenAddress.innerHTML = `https://ocash.info/address/${hstContract.address}`;
       watchAsset.disabled = false;
       transferTokens.disabled = false;
       approveTokens.disabled = false;
