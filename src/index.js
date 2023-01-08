@@ -20,6 +20,7 @@ import {
   failingContractBytecode,
 } from './constants.json';
 
+let tokenSymbol = 'TEST';
 let ethersProvider;
 let hstFactory;
 let piggybankFactory;
@@ -650,9 +651,8 @@ const initialize = async () => {
       const tokenSymbolRef = document.getElementById('tokenSymbol');
       const tokenAmountRef = document.getElementById('tokenAmount');
       const tokenAmount = tokenAmountRef.value;
-      const tokenSymbol = tokenSymbolRef.value;
+      tokenSymbol = tokenSymbolRef.value;
 
-      const _initialAmount = 100;
       const _tokenName = tokenNameRef.value;
 
       try {
