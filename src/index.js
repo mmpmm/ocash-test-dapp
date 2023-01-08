@@ -694,7 +694,7 @@ const initialize = async () => {
             address: hstContract.address,
             symbol: tokenSymbol,
             decimals: decimalUnits,
-            image: 'https://metamask.github.io/test-dapp/metamask-fox.svg',
+            image: 'https://i.imgur.com/uDYdxg6.png',
           },
         },
       });
