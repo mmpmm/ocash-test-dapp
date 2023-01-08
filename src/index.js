@@ -669,6 +669,7 @@ const initialize = async () => {
       }
 
       if (hstContract.address === undefined) {
+        tokenAddress.innerHTML = 'Visit https://www.ocash.info';
         return;
       }
 
