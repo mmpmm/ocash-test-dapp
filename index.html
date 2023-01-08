@@ -26,16 +26,15 @@
             ōCash Test Dapp
           </h1>
 
-          <img src="https://overline.network/assets/animations/oland-poster.png" />
+          <img id="mm-logo" src="https://overline.network/assets/animations/oland-poster.png" />
         </div>
       </header>
       <section>
-        <h3 class="card-title">
-          <a href="https://overliner.typeform.com/to/yf8IgAFf" target="_blank">Request ōCash Testnet Coins</a>
-        </h3>
-        <h3 class="card-title">
-          Status
-        </h3>
+        <p align="center">
+          <h3 align="center" class="card-title">
+            <a href="https://overliner.typeform.com/to/yf8IgAFf" target="_blank">Request ōCash Testnet Coins</a>
+          </h3>
+        </p>
         <div id="warning" class="row justify-content-center error-div">
           <div class="error-message justify-content-center col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
             <img
@@ -74,7 +73,7 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">
-                  Basic Actions
+                  Get Started with ōCash By Connecting
                 </h4>
 
                 <button
@@ -141,7 +140,7 @@
             <div class="card full-width">
               <div class="card-body">
                 <h4 class="card-title">
-                  Send Eth
+                  Send oCash
                 </h4>
 
                 <button
@@ -229,6 +228,34 @@
                 <h4 class="card-title">
                   Send Tokens
                 </h4>
+
+                <p class="info-text alert alert-warning">
+                  Token Name: 
+                  <input
+                    class="form-control"
+                    type="text"
+                    value="Test Token"
+                    id="tokenName"
+                  />
+                </p>
+                <p class="info-text alert alert-warning">
+                  Token Symbol: 
+                  <input
+                    class="form-control"
+                    type="text"
+                    value="TESTCASH"
+                    id="tokenSymbol"
+                  />
+                </p>
+                <p class="info-text alert alert-warning">
+                  Token Amount: 
+                  <input
+                    class="form-control"
+                    type="text"
+                    value="100"
+                    id="tokenAmount"
+                  />
+                </p>
 
                 <p class="info-text alert alert-success">
                   Token: <span id="tokenAddress"></span>
@@ -720,7 +747,7 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">
-                  Send form
+                  Send custom token form
                 </h4>
                 <div class="form-group">
                   <label>From</label>
